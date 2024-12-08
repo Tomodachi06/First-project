@@ -1,53 +1,88 @@
 body {
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: flex-start;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.circle-btn {
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.toggle-btn{
   align-items: center;
-  background-color: #f0f0f0;
+    justify-content: center;
 }
 
-.sidebar {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(45deg, #8A2BE2, #00FFFF,#8527fc);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.5s ease;
-  position: fixed;
-  top: 0;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2), 0 0 20px 15px rgba(0, 0, 0, 0.1); 
+.circle-btn .toggle-btn {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
 }
 
-/* WebKit browsers */
-.sidebar {
-  -webkit-transition: all 0.5s ease;
+.circle-btn .icon {
+    margin: 0;
+    padding: 0;
 }
 
-/* Mozilla Firefox */
-.sidebar {
-  -moz-transition: all 0.5s ease;
+.circle-btn .menu {
+    display: none;
+    flex-direction: column;
+    padding: 0;
 }
 
-.sidebar.expanded {
-  width: 250px;
-  height: 100%;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 30px;
+.circle-btn.expanded {
+    width: 250px;
+    height: 100vh;
+    border-radius: 0;
+    overflow: visible;
 }
 
-/* WebKit browsers */
-.sidebar.expanded {
-  -webkit-width: 250px;
-  -webkit-height: 100%;
-  -webkit-border-top-left-radius: 20px;
-  -webkit-border-bottom-left-radius: 30px;
+.circle-btn.expanded .menu {
+    display: flex;
 }
 
-/* Mozilla Firefox */
-.sidebar.expanded {
-  -moz-width: 250px;
-  -moz-height: 100%;
- -moz-border-top-left-radius: 20px;
-  -moz-border-bottom-left-radius: 30px;
+.circle-btn a {
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.circle-btn a:hover {
+    background-color: #575757;
+}
+
+.circle-btn a .icon {
+    margin-right: 10px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
 }
