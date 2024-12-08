@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Expandable Sidebar</title>
-  <link rel="stylesheet" href="styles1.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circular to Expanded Sidebar</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="sidebar" class="sidebar">
-    <div id="button" class="button">Login</div>
-    <div id="button" class="button">Sign up</div>
-    <div id="button" class="button">Support</div>
-    <div id="button" class="button">About</div>
-    <div id="button" class="button">Share</div>
-  </div>
-  
-  <script src="script1.js"></script>
+    <div class="circle-btn collapsed">
+        <div class="toggle-btn">
+            <span class="icon">📂</span>
+        </div>
+        <div class="menu">
+            <a href="#"><span class="icon">🏠</span> Dashboard</a>
+            <a href="#"><span class="icon">🔍</span> Search</a>
+            <a href="#"><span class="icon">📊</span> Insights</a>
+            <a href="#"><span class="icon">📄</span> Docs</a>
+            <a href="#"><span class="icon">🛒</span> Products</a>
+        </div>
+    </div>
+    <div class="content">
+        <!-- Main content goes here -->
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
