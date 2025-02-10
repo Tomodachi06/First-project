@@ -9,6 +9,9 @@ body {
     background-color: #f4f4f4;
 }
 
+.p {
+  text-align: center;
+}
 
 .circle-btn {
     width: 50px;
