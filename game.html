@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="boleans.css">
     <script>
       const score = {
-        wins: 0,
-        losses: 0,
-        ties: 0,
+        Wins: 0,
+        Losses: 0,
+        Ties: 0,
       }
       
       function playGame(playerMove){
@@ -46,16 +46,19 @@
       }
       
       if (result === 'You win.') {
-        score.wins += 1;
+        score.Wins += 1;
       }
       else if (result === 'You lose.') {
-        score.losses += 1;
+        score.Losses += 1;
       }
       else if (result === 'Tie.') {
-        score.ties += 1;
+        score.Ties += 1;
       }
       
-  alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result},`);
+
+alert(`${playerMove} You have selected  ${computerMove} Selected ${result}、Wins ${score.Wins},Losses ${score.Losses}, Ties${score.Ties}`);
+
+
       }
       
       function pickComputerMove() {
